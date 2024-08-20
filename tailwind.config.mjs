@@ -35,5 +35,12 @@ export default {
             }
         ]
     },
-    plugins: [require('daisyui')]
+    plugins: [
+        require('daisyui'),
+        require('@tailwindcss/aspect-ratio'),
+        require('@tailwindcss/forms'),
+        require('@tailwindcss/typography'),
+        require('@tailwindcss/container-queries'),
+        require('@tailwindcss/forms')
+    ]
 };

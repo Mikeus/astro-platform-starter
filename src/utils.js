@@ -3,7 +3,7 @@ export function getNetlifyContext() {
     return process.env.CONTEXT;
 }
 
-export function cacheHeaders(maxAgeDays = 365, cacheTags?: string[]): Record<string, string> {
+export function cacheHeaders(maxAgeDays = 365, cacheTags) {
     // As far as the browser is concerned, it must revalidate on every request.
     // However, Netlify CDN is told to keep the content cached for up to maxAgeDays (note: new deployment bust the cache by default).
     // We're also setting cache tags to be able to later purge via API (see: https://www.netlify.com/blog/cache-tags-and-purge-api-on-netlify/)

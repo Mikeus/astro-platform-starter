@@ -1,0 +1,32 @@
+---
+import '../../src/styles/globals.css';
+import '@fontsource/inter/400.css';
+import '@fontsource/inter/800.css';
+import interFont400 from '@fontsource/inter/files/inter-latin-400-normal.woff2?url';
+import interFont800 from '@fontsource/inter/files/inter-latin-800-normal.woff2?url';
+import { ViewTransitions } from 'astro:transitions';
+
+
+
+
+const { title } = Astro.props;
+---
+
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>{title}</title>
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="preload" as="font" type="font/woff2" href={interFont400} crossorigin />
+        <link rel="preload" as="font" type="font/woff2" href={interFont800} crossorigin />
+        <ViewTransitions />
+    </head>
+    <body>
+      <slot />
+        <script src="../alpine-init.js"></script>
+    </body>
+</html>

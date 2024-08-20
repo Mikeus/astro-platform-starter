@@ -1,0 +1,23 @@
+User-agent: *
+Disallow: /
+
+# Allow Google Ads bot
+User-agent: AdsBot-Google
+Allow: /
+
+# Allow specific PPC landing pages (not for organic search)
+# Allow: /ppc-landing-page-1/
+# Allow: /ppc-landing-page-2/
+
+# Allow company information pages (for potential organic search)
+# Allow: /company-landing-page-1/
+# Allow: /company-landing-page-2/
+
+
+
+# Allow Googlebot to index company pages
+# User-agent: Googlebot
+# Allow: /company-landing-page-1/
+# Allow: /company-landing-page-2/
+# Disallow: /ppc-landing-page-1/
+# Disallow: /ppc-landing-page-2/
